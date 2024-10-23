@@ -1,0 +1,93 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            border: 3px solid #000080;
+            border-radius: 15px;
+            padding: 20px;
+            width: 60%;
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            color: #000080;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Выравниваем кнопки по нижнему краю с полями */
+            margin-bottom: 20px;
+        }
+        .select-sentence, input[type="text"] {
+            width: 600px; /* Устанавливаем одинаковую ширину для всех полей */
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #000080;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #000080;
+        }
+        .output-box-characters{
+            width: 600px; /* Устанавливаем одинаковую ширину для всех полей */
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #000080;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #000080;
+        }
+        .output-box{
+            width: 600px; /* Устанавливаем одинаковую ширину для всех полей */
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #000080;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #000080;
+        }
+
+        .button {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 25%; /* Устанавливаем ширину кнопок */
+            text-align: center;
+            margin-top: 23px;
+        }
+        .button:hover {
+            background-color: #3333cc;
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            color: #000080;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+        }
+        textarea {
+            resize: none; /* Запрещаем изменять размер */
+   }
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }

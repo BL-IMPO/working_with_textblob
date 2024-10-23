@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with TextBlob</title>
+    <link href="{{ url_for('static', filename='style/style.css')}}"  rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Working with TextBlob</div>
+
+    <!-- Dropdown for Random Sentences -->
+    <form action="/process" method="POST">
+    <div class="row">
+        <div>
+            <label for="sentenceSelect">10 random sentences from Little Women</label>
+            <select class="select-sentence" id="sentenceSelect" name="sentence">
+                <!--<option>Select a sentence</option> -->
+                {% for sentence in sentences %}
+                <option value="{{ sentence }}">{{ sentence }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="button" name="command" value="select">Select</button>
+    </div>
+
+    <!-- Input field for words -->
+    <div class="row">
+        <div style="width: 70%;">
+            <label for="wordsInput">Command output:</label>
+            <textarea id="widerTextarea" class="output-box" rows="5" readonly>{{ output }}</textarea>
+        </div>
+        <button class="button" name="command" value="words">Words</button>
+    </div>
+    </form>
+
+    <!-- Show characters -->
+    <form action="/characters" method="POST">
+    <div class="row">
+        <div style="width: 70%;">
+            <label for="charactersList">The list of characters from Little Women</label>
+            <textarea id="widerTextarea" class="output-box-characters" rows="5" readonly>{{ characters | join(', ') }}</textarea>
+        </div>
+        <button class="button">Show</button>
+    </div>
+    </form>
+
+    <!-- Synonym, Antonym, Lemmas buttons -->
+    <form action="/process" method="POST">
+    <div class="button-row">
+        <button class="button" name="command" value="synonym">Synonym</button>
+        <button class="button" name="command" value="antonym">Antonym</button>
+        <button class="button" name="command" value="lemmas">Lemmas</button>
+    </div>
+    </form>
+</div>
+
+</body>
+</html>
